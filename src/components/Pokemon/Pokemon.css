@@ -18,10 +18,23 @@
 .pokemon_name{
 font-size: larger;
 margin: 0 auto;
+margin-top: 0.5rem;
 letter-spacing: 0.5rem;
 display: flex;
 justify-content: center;
+
 }
-.pokemon:hover{
+ a{
+    color:azure;
+}
+.pokemon:hover {
 background-color:beige;
+border-radius: 25px;
+
+
+
+}
+.pokemon:hover a{
+color:black;
+
 }
