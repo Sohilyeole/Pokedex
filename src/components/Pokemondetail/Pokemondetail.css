@@ -31,3 +31,19 @@
     height: 250px;
    
 }
+li{
+    list-style: none;
+}
+.samepoke p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.listofpoke{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}

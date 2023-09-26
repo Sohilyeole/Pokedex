@@ -3,16 +3,23 @@
 import { useParams } from "react-router-dom"
 import "./Pokemondetail.css"
 import usePokemondetails from "../../Hooks/usePokemondetails";
+import Pokemon from "../Pokemon/Pokemon";
+import { useEffect, useState } from "react";
 
 
 
 function Pokemondetails({pokemonName}){
    
+   
 
     const{id}=useParams();
     const [pokemon,pokemonliststate]=usePokemondetails(id,pokemonName);
+
+    // const [pokemon,pokemonliststate]=usePokemondetails(id,pokemonName);
+  
     
-   
+    
+    
   
     return (
        <div className="pokemondetails_wrapper">
@@ -27,11 +34,19 @@ function Pokemondetails({pokemonName}){
            
         </div>
         { pokemon.types && pokemon.similarpokemons&&
+        
+        <div className="samepoke">
+            <p>more {pokemon.types[0]} type pokemon</p> 
 
-        <div>
-            more {pokemon.types[0]} type pokemon
-            <ul>
-                {pokemon.similarpokemons.map((p)=><li key={p.pokemon.name}>{p.pokemon.name}</li>)}
+            
+            <ul className="listofpoke">
+                {/* {pokemon.similarpokemons.map((p)=><li key={p.pokemon.name}>{p.pokemon.name}</li>)} */}
+                {pokemon.similarpokemons.map((p)=>
+                <li key={p.data.name}>
+                    
+                    {<Pokemon name={p.data.name} image={p.data.sprites.other.dream_world.front_default} id={p.data.id}/> }
+                </li>)
+                }
               
         
 
