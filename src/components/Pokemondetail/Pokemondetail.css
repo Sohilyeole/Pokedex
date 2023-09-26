@@ -17,12 +17,13 @@
     border:1px solid gainsboro;
     border-radius: 15px;
     padding:1rem;
-    background-color: gainsboro;
+    background-color: rgb(46, 16, 16);
 }
 .pokemondetails_wrapper{
     display: flex;
     flex-direction: column;
     align-items: center;
+    color:aliceblue
     
 }
 .pokemonimage{
